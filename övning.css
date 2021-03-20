@@ -51,11 +51,12 @@ h1, p {
     margin-bottom: 1.7rem;
     border-radius: 15px;
     height: 3.7rem;
-    width: 540px;
+    width: 523px;
     background-color: #E0DEDE;
     border-style:hidden;
 
-
+    /*position cursor to right*/
+    padding: 0 0 0 20px;
 }
 
 .input2_3 {
@@ -63,11 +64,12 @@ h1, p {
     margin-bottom: 1.7rem;
     border-radius: 15px;
     height: 3.7rem;
-    width: 16.6rem;
+    width: 15.6rem;
     background-color: #E0DEDE;
     border-style: hidden;
-    
-    
+
+    /*position cursor to right*/
+    padding: 0 0 0 20px;
 }
 
 /*hover for the text fields*/
@@ -91,10 +93,19 @@ h1, p {
 }
 
 ::placeholder {  
-    padding-left: 20px; 
     font-style: italic;
    
 } 
+
+/*change the default on clicked input field*/
+
+.input1_4:focus {
+    outline-style: none;
+}
+
+.input2_3:focus {
+    outline-style: none;
+}
 
 button {
     border-radius: 15px;
