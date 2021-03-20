@@ -54,8 +54,8 @@ h1, p {
     width: 540px;
     background-color: #E0DEDE;
     border-style:hidden;
-    font-style: italic;
-    
+
+
 }
 
 .input2_3 {
@@ -66,7 +66,7 @@ h1, p {
     width: 16.6rem;
     background-color: #E0DEDE;
     border-style: hidden;
-    font-style: italic;
+    
     
 }
 
@@ -90,6 +90,12 @@ h1, p {
     /*inside border black 2px width*/
 }
 
+::placeholder {  
+    padding-left: 20px; 
+    font-style: italic;
+   
+} 
+
 button {
     border-radius: 15px;
     border-style: none;
@@ -100,7 +106,7 @@ button {
     width: 34rem;
     font-size: 1.5rem;
     margin-top: 5px;
-    margin-bottom: 2rem;
+    margin-bottom: 2.4rem;
 }
 
 #align_fields {
@@ -114,7 +120,82 @@ a {
     color: #4AA6D4;
 }
 
+/* Customize the label (the container) */
+
 .terms_of_service {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+/*hide the default checkbox*/
+
+  .terms_of_service input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #D1CFCD;
+    border-color: #B8B6B4;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+
+  
+  /* When the checkbox is checked, add a blue background */
+  .terms_of_service input:checked ~ .checkbox {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .terms_of_service input:checked ~ .checkbox:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .terms_of_service .checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+label a {
     text-decoration: none;
-    font-size: 1rem;
+}
+
+#terms_of_service {
+    font-size: 1.4rem;
+    color: #545454;
 }
