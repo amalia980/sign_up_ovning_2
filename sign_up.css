@@ -120,6 +120,44 @@ button {
     margin-bottom: 2.4rem;
 }
 
+/*arrow*/
+
+.arrow { /*this middle part of arrow is not showing*/
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+    border-radius: 9px;
+    left: 13rem;
+    bottom: 0.7rem;
+  }
+  
+  .arrow:after {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 3px;
+      background-color: white;
+      transform: rotate(45deg);
+      position: absolute;
+      right: -3.5px;
+      bottom: 4.5px;
+      border-radius: 9px;
+  }
+  
+  .arrow:before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 3px;
+      background-color: white;
+      transform: rotate(-45deg);
+      position: absolute;
+      right: -3.5px;
+      bottom: -4.5px;
+      border-radius: 9px;
+  }
+
 #align_fields {
     margin: auto;
     width: 80%;
